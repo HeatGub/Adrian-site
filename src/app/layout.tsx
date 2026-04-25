@@ -1,6 +1,3 @@
-import "./globals.css";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher"
-
 export const metadata = {
   metadataBase: new URL("https://example.com"),
   title: {
@@ -18,16 +15,19 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import "./globals.css";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl">
       <body className="min-h-screen">
-        <LanguageSwitcher/>
-        {children}
+        <LanguageSwitcher />
+        <Navbar />
+        <main className="pt-16 text-center">{children}</main>
+        <Footer />
       </body>
     </html>
   );
