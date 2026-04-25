@@ -1,4 +1,5 @@
 import "./globals.css";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 
 export const metadata = {
   metadataBase: new URL("https://example.com"),
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className="min-h-screen">
+        <LanguageSwitcher/>
         {children}
       </body>
     </html>
