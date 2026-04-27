@@ -12,7 +12,7 @@ export const NAV_LINKS: NavLinkDef[] = [
   { slug: "news-press", labelEn: "NEWS & PRESS", labelPl: "NEWS & PRESS" },
   { slug: "media",      labelEn: "MEDIA",        labelPl: "MEDIA"        },
   { slug: "duo",        labelEn: "DUO+",         labelPl: "DUO+"         },
-  { slug: "kontakt",    labelEn: "CONTACT",      labelPl: "KONTAKT"      },
+  { slug: "contact",    labelEn: "CONTACT",      labelPl: "KONTAKT"      },
 ];
 
 /** Build the full locale-prefixed href for a slug. */

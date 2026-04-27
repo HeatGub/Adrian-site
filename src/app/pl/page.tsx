@@ -9,11 +9,14 @@ export const metadata = {
   },
 };
 
+import { HeroPhoto } from "@/components/HeroPhoto"
+
 export default function PLPage() {
   return (
-    <main className="p-10">
+    <main>
+      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="STONGA GŁOWNA"/>
       <h1 className="text-4xl font-bold">Adrian Stanciu</h1>
-      <p className="mt-4">Polska wersja strony</p>
+      <p className="mt-4">Wersja polska</p>
     </main>
   );
 }

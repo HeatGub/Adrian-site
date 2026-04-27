@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-(--bg-primary) border-b border-(--border-default)/20">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-(--border-default)/20">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href={`/${locale}`} className="shrink-0">

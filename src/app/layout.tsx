@@ -16,7 +16,6 @@ export const metadata = {
 };
 
 import "./globals.css";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -24,9 +23,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl">
       <body className="min-h-screen">
-        <LanguageSwitcher />
         <Navbar />
-        <main className="pt-16 text-center">{children}</main>
+        <main className="text-center">{children}</main>
         <Footer />
       </body>
     </html>
