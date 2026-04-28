@@ -2,7 +2,7 @@
 
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import type { Locale } from "@/components/NavigationHelpers"
+import type { Locale } from "@/components/NavigationHelpers";
 
 type ContactFormProps = {
   language: Locale;
@@ -10,9 +10,40 @@ type ContactFormProps = {
   className?: string;
 };
 
-export function ContactForm({ header = "CONTACT US", className = "" }: ContactFormProps) {
+const translations = {
+  en: {
+    defaultHeader: "CONTACT ME",
+    nameSurname: "Name and surname",
+    email: "Email",
+    phone: "Phone",
+    message: "Message",
+    send: "Send Message",
+    sending: "Sending...",
+    success: "Message sent successfully.",
+    error: "Failed to send message. Please try again.",
+  },
+  pl: {
+    defaultHeader: "WYŚLIJ WIADOMOŚĆ",
+    nameSurname: "Imię i nazwisko",
+    email: "Email",
+    phone: "Telefon",
+    message: "Wiadomość",
+    send: "Wyślij wiadomość",
+    sending: "Wysyłanie...",
+    success: "Wiadomość została wysłana.",
+    error: "Nie udało się wysłać wiadomości. Proszę spróbować ponownie.",
+  },
+} satisfies Record<Locale, Record<string, string>>;
+
+export function ContactForm({
+  language,
+  header,
+  className = "",
+}: ContactFormProps) {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const t = translations[language];
 
   const inputBaseClass = `
     w-full
@@ -32,12 +63,6 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
 
     const form = e.currentTarget;
 
-    const emailJsIdentifiers = {
-      SERVICE_ID: "service_312g9rl",
-      TEMPLATE_ID: "template_miol5xw",
-      PUBLIC_KEY: "614CUwsKdMD6lEANQ",
-    };
-
     const params = {
       nameSurname: (form.elements.namedItem("nameSurname") as HTMLInputElement)
         .value,
@@ -49,10 +74,10 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
 
     try {
       await emailjs.send(
-        emailJsIdentifiers.SERVICE_ID,
-        emailJsIdentifiers.TEMPLATE_ID,
+        "service_312g9rl",
+        "template_miol5xw",
         params,
-        // emailJsIdentifiers.PUBLIC_KEY
+        "614CUwsKdMD6lEANQ",
       );
 
       setStatus("success");
@@ -70,12 +95,13 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
       onSubmit={handleSubmit}
       className={`w-full max-w-[80%] my-8 mx-auto space-y-6 ${className}`}
     >
-      <h1 className="text-3xl">{header}</h1>
+      <h1 className="text-3xl">{header ?? t.defaultHeader}</h1>
+
       <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
         <input
           name="nameSurname"
           type="text"
-          placeholder="Name and surname"
+          placeholder={t.nameSurname}
           className={inputBaseClass}
           required
         />
@@ -83,7 +109,7 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
         <input
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder={t.email}
           className={inputBaseClass}
           required
         />
@@ -91,7 +117,7 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
         <input
           name="phone"
           type="tel"
-          placeholder="Phone"
+          placeholder={t.phone}
           className={inputBaseClass}
         />
       </div>
@@ -99,7 +125,7 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
       <div className="overflow-hidden">
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder={t.message}
           rows={6}
           className={`
             ${inputBaseClass}
@@ -124,16 +150,14 @@ export function ContactForm({ header = "CONTACT US", className = "" }: ContactFo
           disabled:opacity-50
         "
       >
-        {loading ? "Sending..." : "Send Message"}
+        {loading ? t.sending : t.send}
       </button>
 
       {status === "success" && (
-        <p className="text-(--accent-primary)">Message sent successfully.</p>
+        <p className="text-(--accent-primary)">{t.success}</p>
       )}
 
-      {status === "error" && (
-        <p className="text-red-400">Failed to send message. Try again.</p>
-      )}
+      {status === "error" && <p className="text-red-400">{t.error}</p>}
     </form>
   );
 }

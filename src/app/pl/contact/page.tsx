@@ -12,11 +12,11 @@ export const metadata = {
 import { HeroPhoto } from "@/components/HeroPhoto"
 import { ContactForm } from "@/components/ContactForm"
 
-export default function ENPage() {
+export default function PLPage() {
   return (
     <main>
       <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="KONTAKT"/>
-      <ContactForm language="en"/>
+      <ContactForm language="pl"/>
     </main>
   );
 }

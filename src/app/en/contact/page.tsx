@@ -16,7 +16,7 @@ export default function ENPage() {
   return (
     <main>
       <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="CONTACT"/>
-      <ContactForm language="pl"/>
+      <ContactForm language="en"/>
     </main>
   );
 }
