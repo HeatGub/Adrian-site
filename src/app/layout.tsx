@@ -18,10 +18,21 @@ export const metadata = {
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Geist, Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-primary",
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-secondary",
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pl">
+    <html className={`${geist.variable} ${playfair.variable}`}>
       <body className="min-h-screen">
         <Navbar />
         <main className="text-center">{children}</main>

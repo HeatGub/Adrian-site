@@ -17,18 +17,18 @@ const translations = {
     email: "Email",
     phone: "Phone",
     message: "Message",
-    send: "Send Message",
+    send: "SEND MESSAGE",
     sending: "Sending...",
     success: "Message sent successfully.",
     error: "Failed to send message. Please try again.",
   },
   pl: {
-    defaultHeader: "WYŚLIJ WIADOMOŚĆ",
+    defaultHeader: "SKONTAKTUJ SIĘ ZE MNĄ",
     nameSurname: "Imię i nazwisko",
     email: "Email",
     phone: "Telefon",
     message: "Wiadomość",
-    send: "Wyślij wiadomość",
+    send: "WYŚLIJ WIADOMOŚĆ",
     sending: "Wysyłanie...",
     success: "Wiadomość została wysłana.",
     error: "Nie udało się wysłać wiadomości. Proszę spróbować ponownie.",
@@ -91,73 +91,77 @@ export function ContactForm({
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={`w-full max-w-[80%] my-8 mx-auto space-y-6 ${className}`}
-    >
-      <h1 className="text-3xl">{header ?? t.defaultHeader}</h1>
+    <>
+      <h1 className="text-3xl mt-8">{header ?? t.defaultHeader}</h1>
 
-      <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
-        <input
-          name="nameSurname"
-          type="text"
-          placeholder={t.nameSurname}
-          className={inputBaseClass}
-          required
-        />
+      <form
+        onSubmit={handleSubmit}
+        className={`w-full max-w-[80%] my-8 mx-auto space-y-6 font-(family-name:--font-secondary) tracking-wide ${className}`}
+      >
+        <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
+          <input
+            name="nameSurname"
+            type="text"
+            placeholder={t.nameSurname}
+            className={inputBaseClass}
+            required
+          />
 
-        <input
-          name="email"
-          type="email"
-          placeholder={t.email}
-          className={inputBaseClass}
-          required
-        />
+          <input
+            name="email"
+            type="email"
+            placeholder={t.email}
+            className={inputBaseClass}
+            required
+          />
 
-        <input
-          name="phone"
-          type="tel"
-          placeholder={t.phone}
-          className={inputBaseClass}
-        />
-      </div>
+          <input
+            name="phone"
+            type="tel"
+            placeholder={t.phone}
+            className={inputBaseClass}
+          />
+        </div>
 
-      <div className="overflow-hidden">
-        <textarea
-          name="message"
-          placeholder={t.message}
-          rows={6}
-          className={`
+        <div className="overflow-hidden">
+          <textarea
+            name="message"
+            placeholder={t.message}
+            rows={6}
+            className={`
             ${inputBaseClass}
             min-h-40
             max-w-full
             resize-y
           `}
-          required
-        />
-      </div>
+            required
+          />
+        </div>
 
-      <button
-        type="submit"
-        disabled={loading}
-        className="
-          border border-(--accent-primary)
-          px-6 py-3
-          text-(--accent-primary)
-          transition
-          hover:bg-(--accent-primary)
-          hover:text-(--bg-primary)
-          disabled:opacity-50
-        "
-      >
-        {loading ? t.sending : t.send}
-      </button>
+        <button
+          type="submit"
+          disabled={loading}
+          className="
+            tracking-[0.18em]
+            font-(family-name:--font-primary)
+            border border-(--accent-primary)
+            px-6 py-3
+            text-(--accent-primary)
+            transition
+            hover:bg-(--accent-primary)
+            hover:text-(--bg-primary)
+            disabled:opacity-50
+            "
+        >
+          {loading ? t.sending : t.send}
+        </button>
 
-      {status === "success" && (
-        <p className="text-(--accent-primary)">{t.success}</p>
-      )}
+        {status === "success" && (
+          <p className="text-(--accent-primary)">{t.success}</p>
+        )}
 
-      {status === "error" && <p className="text-red-400">{t.error}</p>}
-    </form>
+        {status === "error" && <p className="text-red-400">{t.error}</p>}
+      </form>
+    </>
   );
 }
