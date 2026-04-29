@@ -9,61 +9,72 @@ export const metadata = {
   },
 };
 
-import { HeroPhoto } from "@/components/HeroPhoto";
-import { Section } from "@/components/Section";
-import { ImageTextBlock } from "@/components/ImageTextBlock";
+import HomePageTemplate from "@/components/HomePageTemplate";
+import { HomePageTemplateProps } from "@/components/HomePageTemplate";
+
+export const homeContentEN: HomePageTemplateProps = {
+  hero: {
+    src: "/images/slide1.jpg",
+    alt: "Adrian",
+    overlayText: "HOME",
+  },
+
+  sections: [
+    {
+      blocks: [
+        {
+          imageSrc: "/images/gl2.jpg",
+          imageAlt: "Adrian",
+          imageSide: "left",
+          content: (
+            <p className="tracking-wider">
+              Having had a chance to discover music as a soloist, chamber
+              musician, and an orchestra player, I can say that music is not
+              just a passion, but it’s the most subtle, refined form of
+              expressing emotions and a very special, intimate dialogue between
+              the audience and the musician.
+            </p>
+          ),
+        },
+        {
+          imageSrc: "/images/gl1.jpg",
+          imageAlt: "Adrian",
+          imageSide: "right",
+          content: (
+            <p className="tracking-wider">
+              Adrian Stanciu collaborates with many excellent conductors and
+              ensembles as a soloist and orchestral musician. He has performed
+              in the largest concert halls in Europe, South America, and
+              Australia, including Wigmore Hall in London, Beethoven Haus in
+              Bonn, Grand Théâtre de Bordeaux, Romanian Athenaeum in Bucharest,
+              Musikverein and Konzerthaus in Vienna, and Melbourne Recital
+              Centre. His artistic achievements are crowned with many recordings
+              on the radio, television, and CDs.
+            </p>
+          ),
+        },
+      ],
+    },
+
+    {
+      className: "bg-(--bg-secondary)",
+      blocks: [
+        {
+          imageSrc: "/images/DUO2zm.jpg",
+          imageAlt: "Adrian",
+          imageSide: "left",
+          content: (
+            <p className="text-2xl tracking-wider">
+              Learn more about the other musician from DUO+
+            </p>
+          ),
+        },
+      ],
+    },
+  ],
+};
+
 
 export default function ENPage() {
-  return (
-    <main>
-      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="HOME" />
-      <Section>
-        <ImageTextBlock
-          imageSrc={"/images/slide1.jpg"}
-          imageAlt="Adrian"
-          imageSide="left"
-        >
-          <p className="text-lg tracking-wider">
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Quisque et placerat dolor. Maecenas pharetra malesuada eros,
-            sed finibus nulla porttitor sed.
-            <br />
-            <br />
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Quisque et placerat dolor. Maecenas pharetra malesuada eros,
-            sed finibus nulla porttitor sed.
-          </p>
-        </ImageTextBlock>
-        <ImageTextBlock
-          imageSrc={"/images/slide1.jpg"}
-          imageAlt="Adrian"
-          imageSide="right"
-        >
-          <p className="text-lg tracking-wider">
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Quisque et placerat dolor. Maecenas pharetra malesuada eros,
-            sed finibus nulla porttitor sed.
-            <br />
-            <br />
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Quisque et placerat dolor. Maecenas pharetra malesuada eros,
-            sed finibus nulla porttitor sed.
-          </p>
-        </ImageTextBlock>
-      </Section>
-      <Section className="bg-(--bg-secondary)">
-        <ImageTextBlock
-          imageSrc={"/images/slide1.jpg"}
-          imageAlt="Adrian"
-          imageSide="left"
-        >
-          <p className="text-lg tracking-wider">
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Quisque et placerat dolor. Maecenas pharetra malesuada eros,
-            sed finibus nulla porttitor sed.
-          </p>
-        </ImageTextBlock>
-      </Section>
-    </main>
-  );
+  return <HomePageTemplate {...homeContentEN} />;
 }

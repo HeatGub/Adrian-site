@@ -9,14 +9,71 @@ export const metadata = {
   },
 };
 
-import { HeroPhoto } from "@/components/HeroPhoto"
+import HomePageTemplate from "@/components/HomePageTemplate";
+import { HomePageTemplateProps } from "@/components/HomePageTemplate";
+
+export const homeContentPL: HomePageTemplateProps = {
+  hero: {
+    src: "/images/slide1.jpg",
+    alt: "Adrian",
+    overlayText: "STRONA GŁÓWNA",
+  },
+
+  sections: [
+    {
+      blocks: [
+        {
+          imageSrc: "/images/gl2.jpg",
+          imageAlt: "Adrian",
+          imageSide: "left",
+          content: (
+            <p className="tracking-wider">
+              Mając szansę odkryć muzykę jako kameralista, solista i członek
+              orkiestry mogę powiedzieć, że kameralistyka to nie tylko pasja,
+              ale najbardziej subtelna, wyrafinowana forma muzyki oraz bardzo
+              szczególny i intymny dialog pomiędzy publicznością a muzykiem.
+            </p>
+          ),
+        },
+        {
+          imageSrc: "/images/gl1.jpg",
+          imageAlt: "Adrian",
+          imageSide: "right",
+          content: (
+            <p className="tracking-wider">
+              Adrian Stanciu współpracuje z wieloma znakomitymi dyrygentami i
+              zespołami jako solista oraz muzyk orkiestrowy. Występował w
+              największych salach koncertowych Europy, Ameryki Południowej i
+              Australii, m.in. Wigmore Hall w Londynie, Beethoven Haus w Bonn,
+              Grand Théâtre de Bordeaux, Ateneum Rumuńskim w Bukareszcie,
+              Musikverein i Konzerthaus w Wiedniu, Melbourne Recital Centre.
+              Jego dotychczasowy dorobek artystyczny wieńczą liczne nagrania dla
+              radia i telewizji oraz nagrania płytowe.
+            </p>
+          ),
+        },
+      ],
+    },
+
+    {
+      className: "bg-(--bg-secondary)",
+      blocks: [
+        {
+          imageSrc: "/images/DUO2zm.jpg",
+          imageAlt: "Adrian",
+          imageSide: "left",
+          content: (
+            <p className="text-2xl tracking-wider">
+              Jeśli chcesz dowiedzieć się czegoś więcej o drugiej osobie z DUO+
+            </p>
+          ),
+        },
+      ],
+    },
+  ],
+};
+
 
 export default function PLPage() {
-  return (
-    <main>
-      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="STONGA GŁOWNA"/>
-      <h1 className="text-4xl font-bold">Adrian Stanciu</h1>
-      <p className="mt-4">Wersja polska</p>
-    </main>
-  );
+  return <HomePageTemplate {...homeContentPL} />;
 }
