@@ -12,6 +12,7 @@ export const metadata = {
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { Section } from "@/components/Section";
 import { ReviewBlock } from "@/components/ReviewBlock";
+import Image from "next/image";
 
 export default function ENPage() {
   return (
@@ -22,6 +23,14 @@ export default function ENPage() {
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4">
+        <h1 className="text-center text-4xl tracking-wider pb-4">REVIEWS</h1>
+        <Image
+          src="/images/CCF30042022_0001.jpg"
+          alt="article"
+          width={1712}
+          height={200}
+          className="w-full h-auto"
+        />
         <ReviewBlock
           originalQuote="Altowiolista Adrian Stanciu oczarował publiczność czwartkowego koncertu Filharmonii Kameralnej, grając w duecie z greckim wiolonczelistą Christosem Grimpasem koncert Antonio Vivaldiego."
           translatedQuote="The violist Adrian Stanciu charmed the audience of the Thursday Chamber Philharmonic concert by playing Double Concerto by Antonio Vivaldi with the Greek cellist Christos Grimpas."
@@ -53,13 +62,6 @@ export default function ENPage() {
           translatedFrom="translation from German"
           bottomBorder={false}
         />
-
-        {/* <ReviewBlock
-          originalQuote=""
-          translatedQuote=""
-          author="Siegfried Kouba"
-          translatedFrom="translation from German"
-        /> */}
       </Section>
     </main>
   );

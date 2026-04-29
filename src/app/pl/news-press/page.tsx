@@ -12,6 +12,7 @@ export const metadata = {
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { Section } from "@/components/Section";
 import { ReviewBlock } from "@/components/ReviewBlock";
+import Image from "next/image"
 
 export default function PLPage() {
   return (
@@ -22,6 +23,14 @@ export default function PLPage() {
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4">
+        <h1 className="text-center text-4xl tracking-wider pb-4">RECENZJE</h1>
+        <Image
+          src="/images/CCF30042022_0001.jpg"
+          alt="artykuł"
+          width={1712}
+          height={200}
+          className="w-full h-auto"
+        />
         <ReviewBlock
           originalQuote="Altowiolista Adrian Stanciu oczarował publiczność czwartkowego koncertu Filharmonii Kameralnej, grając w duecie z greckim wiolonczelistą Christosem Grimpasem koncert Antonio Vivaldiego."
           author="Wojciech Chamryk"
@@ -45,6 +54,7 @@ export default function PLPage() {
           translatedQuote="Imponującym było usłyszeć wyrafinowanie rytmiczne i tonalne, z jakim zagrano Kwartet smyczkowy op. 35 Maurica Ravela. To było bliskie przysłowiowemu wielkiemu sukcesowi, zwłaszcza upajający finał."
           author="Guido Krawinkel"
           translatedFrom="tłum. z niemieckiego"
+          bottomBorder={false}
         />
       </Section>
     </main>

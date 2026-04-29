@@ -18,7 +18,7 @@ export function ReviewBlock({
   return (
     <figure
       className={`
-        max-w-3xl mx-auto
+        px-2 md:px-8
         text-center
         space-y-4
         py-6 md:py-10
