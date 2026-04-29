@@ -30,18 +30,32 @@ export function ImageTextBlock({
         ${className}
       `}
     >
-      <div className={`relative w-full max-w-sm aspect-3/4 shrink-0 ${imageClassName}`}>
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover"
-        />
-      </div>
-
+      {/* IMAGE WRAPPER */}
       <div
         className={`
-          flex-1 flex items-center
+          w-full flex justify-center
+          ${imageClassName}
+        `}
+      >
+        <div className="relative w-full aspect-3/4 shrink-0">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            sizes="
+              (max-width: 768px) 100vw,
+              55vw
+            "
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* TEXT WRAPPER */}
+      <div
+        className={`
+          w-full
+          flex items-center
           text-justify
           ${textClassName}
         `}

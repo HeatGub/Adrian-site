@@ -32,6 +32,7 @@ export function HeroPhoto({
         alt={alt}
         fill
         priority
+        sizes="100vw"
         className={`object-cover ${focalClassName}`}
       />
 

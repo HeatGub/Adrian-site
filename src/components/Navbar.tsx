@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-(--border-default)/20">
-      <Container className="flex items-center justify-between py-6">
+      <Container className="flex items-center justify-between py-4">
         {/* Logo */}
         <Link href={`/${locale}`} className="shrink-0">
           <Image
@@ -25,7 +25,7 @@ export default function Navbar() {
             width={72}
             height={52}
             priority          // load eagerly — it's above the fold
-            // className="h-auto w-auto"
+            className="h-12 w-auto"
           />
         </Link>
 
