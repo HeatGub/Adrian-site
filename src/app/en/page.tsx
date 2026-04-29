@@ -11,6 +11,7 @@ export const metadata = {
 
 import HomePageTemplate from "@/components/HomePageTemplate";
 import { HomePageTemplateProps } from "@/components/HomePageTemplate";
+import { DuoButton } from "@/components/DuoButton";
 
 export const homeContentEN: HomePageTemplateProps = {
   hero: {
@@ -21,6 +22,7 @@ export const homeContentEN: HomePageTemplateProps = {
 
   sections: [
     {
+      className: "bg-(--bg-secondary)",
       blocks: [
         {
           imageSrc: "/images/gl2.jpg",
@@ -57,23 +59,25 @@ export const homeContentEN: HomePageTemplateProps = {
     },
 
     {
-      className: "bg-(--bg-secondary)",
+      className: "bg-(--bg-tertiary)",
       blocks: [
         {
           imageSrc: "/images/DUO2zm.jpg",
           imageAlt: "Adrian",
           imageSide: "left",
           content: (
-            <p className="text-2xl tracking-wider">
-              Learn more about the other musician from DUO+
-            </p>
+            <>
+              <p className="text-2xl tracking-wider">
+                Learn more about the other musician from DUO+
+              </p>
+              <DuoButton label="CLICK HERE"></DuoButton>
+            </>
           ),
         },
       ],
     },
   ],
 };
-
 
 export default function ENPage() {
   return <HomePageTemplate {...homeContentEN} />;

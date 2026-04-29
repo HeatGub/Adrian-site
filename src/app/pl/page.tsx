@@ -11,6 +11,7 @@ export const metadata = {
 
 import HomePageTemplate from "@/components/HomePageTemplate";
 import { HomePageTemplateProps } from "@/components/HomePageTemplate";
+import { DuoButton } from "@/components/DuoButton";
 
 export const homeContentPL: HomePageTemplateProps = {
   hero: {
@@ -21,6 +22,7 @@ export const homeContentPL: HomePageTemplateProps = {
 
   sections: [
     {
+      className: "bg-(--bg-secondary)",
       blocks: [
         {
           imageSrc: "/images/gl2.jpg",
@@ -56,23 +58,26 @@ export const homeContentPL: HomePageTemplateProps = {
     },
 
     {
-      className: "bg-(--bg-secondary)",
+      className: "bg-(--bg-tertiary)",
       blocks: [
         {
           imageSrc: "/images/DUO2zm.jpg",
           imageAlt: "Adrian",
           imageSide: "left",
           content: (
-            <p className="text-2xl tracking-wider">
-              Jeśli chcesz dowiedzieć się czegoś więcej o drugiej osobie z DUO+
-            </p>
+            <>
+              <p className="text-2xl tracking-wider">
+                Jeśli chcesz dowiedzieć się czegoś więcej o drugiej osobie z
+                DUO+
+              </p>
+              <DuoButton label="PRZEJDŹ"></DuoButton>
+            </>
           ),
         },
       ],
     },
   ],
 };
-
 
 export default function PLPage() {
   return <HomePageTemplate {...homeContentPL} />;
