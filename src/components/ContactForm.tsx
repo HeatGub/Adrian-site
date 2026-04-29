@@ -3,6 +3,7 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import type { Locale } from "@/components/NavigationHelpers";
+import { Container } from "@/components/Container";
 
 type ContactFormProps = {
   language: Locale;
@@ -91,12 +92,12 @@ export function ContactForm({
   };
 
   return (
-    <>
+    <Container className="text-center">
       <h1 className="text-3xl mt-8">{header ?? t.defaultHeader}</h1>
 
       <form
         onSubmit={handleSubmit}
-        className={`w-full max-w-[80%] my-8 mx-auto space-y-6 font-(family-name:--font-secondary) tracking-wide ${className}`}
+        className={`w-full my-8 mx-auto space-y-6 font-(family-name:--font-secondary) ${className}`}
       >
         <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
           <input
@@ -162,6 +163,6 @@ export function ContactForm({
 
         {status === "error" && <p className="text-red-400">{t.error}</p>}
       </form>
-    </>
+    </Container>
   );
 }

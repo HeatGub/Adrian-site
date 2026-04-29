@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
+import { Container } from "@/components/Container";
+
 
 type GalleryImage = {
   src: string;
@@ -48,7 +50,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-[20%] my-8">
+    <Container className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
         {galleryImages.map((image, index) => (
           <button
             key={image.src}
@@ -89,7 +91,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
             </div>
           </button>
         ))}
-      </div>
+      </Container>
 
       {activeIndex !== null && (
         <div

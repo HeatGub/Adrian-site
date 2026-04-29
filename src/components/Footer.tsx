@@ -7,6 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import SocialLinks from "./SocialLinks";
 import { localeFromPath } from "./NavigationHelpers";
 import Image from "next/image";
+import { Container } from "@/components/Container"
 
 const footerText = {
   "en": "Copyright © 2022 Adrian Stanciu All rights reserved | Design and development:",
@@ -19,7 +20,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-(--bg-primary) border-t border-(--border-default)/20 pt-12 pb-8">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8">
+      <Container className="flex flex-col items-center gap-8">
         {/* Logo */}
         <Link href={`/${locale}`}>
           <Image
@@ -54,7 +55,7 @@ export default function Footer() {
             {" "}P.T.
           </a>
         </p>
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html className={`${geist.variable} ${playfair.variable}`}>
       <body className="min-h-screen">
         <Navbar />
-        <main className="text-center">{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

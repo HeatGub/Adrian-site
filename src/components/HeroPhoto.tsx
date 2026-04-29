@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Container } from "@/components/Container"
 
 type HeroPhotoProps = {
   src: string;
@@ -35,18 +36,12 @@ export function HeroPhoto({
       />
 
       {overlayText && (
-        <div
-          className={`
-            absolute
-            left-[10%]
-            top-[50%]
-            -translate-y-1/2
-            z-10
-            text-6xl
-            ${overlayClassName}
-          `}
-        >
-          {overlayText}
+        <div className="absolute inset-0 z-10 flex items-center mt-10 text-left">
+          <Container>
+            <div className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-(--text-primary) ${overlayClassName}`}>
+              {overlayText}
+            </div>
+          </Container>
         </div>
       )}
     </div>

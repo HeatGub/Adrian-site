@@ -7,6 +7,7 @@ import NavLinks from "./NavLinks";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeFromPath } from "./NavigationHelpers";
 import Image from "next/image";
+import { Container } from "@/components/Container"
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-(--border-default)/20">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <Container className="flex items-center justify-between py-6">
         {/* Logo */}
         <Link href={`/${locale}`} className="shrink-0">
           <Image
@@ -53,7 +54,7 @@ export default function Navbar() {
             className={`block w-6 h-px bg-(--text-primary) transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
-      </div>
+      </Container>
 
       {/* Mobile drawer */}
       {menuOpen && (
