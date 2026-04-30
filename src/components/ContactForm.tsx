@@ -152,6 +152,7 @@ export function ContactForm({
             hover:bg-(--accent-primary)
             hover:text-(--bg-primary)
             disabled:opacity-50
+            hover:scale-105 active:scale-95
             cursor-pointer
             "
         >

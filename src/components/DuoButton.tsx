@@ -23,6 +23,7 @@ export function DuoButton({ label }: { label: string }) {
         transition-all duration-200
         hover:bg-(--accent-primary)
         hover:text-(--bg-primary)
+        hover:scale-105 active:scale-95
       "
     >
       {label}
