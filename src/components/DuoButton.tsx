@@ -18,10 +18,10 @@ export function DuoButton({ label }: { label: string }) {
         px-5 py-2
         my-6
         tracking-[0.18em] font-medium
-        border border-(--accent-primary)
-        text-(--accent-primary)
+        border border-(--accent-primary-dimmed)
+        text-(--accent-primary-dimmed)
         transition-all duration-200
-        hover:bg-(--accent-primary)
+        hover:bg-(--accent-primary-dimmed)
         hover:text-(--bg-primary)
         hover:scale-105 active:scale-95
         select-none

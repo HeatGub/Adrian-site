@@ -54,7 +54,7 @@ export function ContactForm({
     placeholder:text-(--text-secondary)
     px-4 py-3
     focus:outline-none
-    focus:border-(--accent-primary)
+    focus:border-(--accent-primary-dimmed)
   `;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -93,11 +93,11 @@ export function ContactForm({
 
   return (
     <Container className="text-center">
-      <h1 className="text-3xl mt-8">{header ?? t.defaultHeader}</h1>
+      <h1 className="text-3xl my-8">{header ?? t.defaultHeader}</h1>
 
       <form
         onSubmit={handleSubmit}
-        className={`w-full my-8 mx-auto space-y-6 font-(family-name:--font-secondary) ${className}`}
+        className={`w-full mx-auto space-y-6 font-(family-name:--font-secondary) ${className}`}
       >
         <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
           <input
@@ -145,11 +145,11 @@ export function ContactForm({
           className="
             tracking-[0.18em]
             font-(family-name:--font-primary)
-            border border-(--accent-primary)
+            border border-(--accent-primary-dimmed)
             px-6 py-3
-            text-(--accent-primary)
+            text-(--accent-primary-dimmed)
             transition
-            hover:bg-(--accent-primary)
+            hover:bg-(--accent-primary-dimmed)
             hover:text-(--bg-primary)
             disabled:opacity-50
             hover:scale-105 active:scale-95

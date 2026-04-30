@@ -22,7 +22,7 @@ export function ReviewBlock({
         text-center
         space-y-4
         py-6 md:py-10
-        ${bottomBorder ? "border-b border-(--accent-primary)" : ""}
+        ${bottomBorder ? "border-b border-(--accent-primary-dimmed)" : ""}
         ${className}
       `}
     >
