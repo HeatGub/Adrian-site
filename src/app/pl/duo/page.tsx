@@ -17,7 +17,7 @@ import { Container } from "@/components/Container";
 export default function PLPage() {
   return (
     <>
-      <HeroPhoto src="/images/naglowek3.jpg" alt="test" overlayText="DUO+" />
+      <HeroPhoto src="/images/naglowek4.jpg" alt="test" overlayText="DUO+" focalClassName="object-[center_40%]"/>
       <main className="bg-(--bg-secondary) py-4">
         <Container>
           <ImageTextBlock

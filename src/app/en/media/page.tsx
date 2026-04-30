@@ -9,8 +9,8 @@ export const metadata = {
   },
 };
 
-import { HeroPhoto } from "@/components/HeroPhoto"
-import { PhotoGallery } from "@/components/PhotoGallery"
+import { HeroPhoto } from "@/components/HeroPhoto";
+import { PhotoGallery } from "@/components/PhotoGallery";
 
 export const galleryImages = [
   { src: "/images/s1.jpg", alt: "Adrian EN" },
@@ -20,7 +20,7 @@ export const galleryImages = [
   { src: "/images/AS3-2zm.jpg", alt: "Adrian EN" },
   { src: "/images/AS4BWzm.jpg", alt: "Adrian EN" },
   { src: "/images/naglowek1.jpg", alt: "Adrian EN" },
-  { src: "/images/AS5zm-1.jpg", alt: "Adrian EN" },
+  { src: "/images/AS5zm.jpg", alt: "Adrian EN" },
   { src: "/images/Credit-photo-Simon-Buchou-86zm.jpg", alt: "Adrian EN" },
   { src: "/images/DSC_0036zm-1.jpg", alt: "Adrian EN" },
   { src: "/images/DSC_0056zm-1.jpg", alt: "Adrian EN" },
@@ -30,8 +30,16 @@ export const galleryImages = [
 export default function ENPage() {
   return (
     <main>
-      <HeroPhoto src="/images/AS5zm-1.jpg" alt="test" overlayText="MEDIA EN" focalClassName="object-[center_50%]"/>
-      <PhotoGallery galleryImages={galleryImages}/>
+      <HeroPhoto
+        src="/images/AS5zm.jpg"
+        alt="test"
+        srcSmall="/images/naglowek2-1.jpg"
+        altSmall="test"
+        overlayText="MEDIA"
+        focalClassName="object-[center_40%]"
+        focalClassNameSmall="object-[center_0%]"
+      />
+      <PhotoGallery galleryImages={galleryImages} />
     </main>
   );
 }

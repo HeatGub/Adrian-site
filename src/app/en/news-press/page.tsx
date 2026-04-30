@@ -18,7 +18,7 @@ export default function ENPage() {
   return (
     <main>
       <HeroPhoto
-        src="/images/slide1.jpg"
+        src="/images/naglowek2-1.jpg"
         alt="test"
         overlayText="NEWS & PRESS"
       />

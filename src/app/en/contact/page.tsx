@@ -15,7 +15,7 @@ import { ContactForm } from "@/components/ContactForm"
 export default function ENPage() {
   return (
     <main>
-      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="CONTACT"/>
+      <HeroPhoto src="/images/naglowek4-1.jpg" alt="test" overlayText="CONTACT" focalClassName="object-[center_20%]"/>
       <ContactForm language="en"/>
     </main>
   );
