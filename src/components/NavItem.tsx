@@ -42,7 +42,7 @@ export default function NavItem({
     <Link
       href={href}
       onClick={onClick}
-      className={`transition-colors duration-200 text-center px-2 ${className} ${stateClass}`}
+      className={`transition-colors duration-200 md:text-center px-2 ${className} ${stateClass}`}
     >
       {label}
     </Link>
