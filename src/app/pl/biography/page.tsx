@@ -15,7 +15,15 @@ import { BackgroundImageSection } from "@/components/BackgroundImageSection";
 export default function PLPage() {
   return (
     <main>
-      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="BIOGRAFIA" />
+      <HeroPhoto
+        src="/images/naglowek2.jpg"
+        alt="test"
+        srcSmall="/images/naglowek2-1.jpg"
+        altSmall="test"
+        overlayText="BIOGRAFIA"
+        focalClassName="object-[center_0%]"
+        focalClassNameSmall="object-[center_0%]"
+      />
       <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="EN">
         <p>
           Adrian Stanciu urodził się w Jassach w Rumunii, w rodzinie z

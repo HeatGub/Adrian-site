@@ -15,7 +15,15 @@ import { BackgroundImageSection } from "@/components/BackgroundImageSection";
 export default function ENPage() {
   return (
     <main>
-      <HeroPhoto src="/images/slide1.jpg" alt="test" overlayText="BIOGRAPHY" />
+      <HeroPhoto
+        src="/images/naglowek2.jpg"
+        alt="test"
+        srcSmall="/images/naglowek2-1.jpg"
+        altSmall="test"
+        overlayText="BIOGRAPHY"
+        focalClassName="object-[center_0%]"
+        focalClassNameSmall="object-[center_0%]"
+      />
       <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="EN">
         <p>
           Adrian Stanciu was born in Iaşi, Romania, into a family with a long
@@ -69,8 +77,6 @@ export default function ENPage() {
           and CDs.
         </p>
       </BackgroundImageSection>
-
-      {/* <ContactForm language="en"/> */}
     </main>
   );
 }
