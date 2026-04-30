@@ -54,6 +54,9 @@ export function ImageTextBlock({
           w-full
           flex items-center
           text-justify
+          leading-relaxed
+          font-(family-name:--font-secondary)
+          font-normal
           ${textClassName}
         `}
       >

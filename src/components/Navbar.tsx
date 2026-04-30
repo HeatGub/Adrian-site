@@ -38,7 +38,8 @@ export default function Navbar() {
   useEffect(() => {
     const calculateDim = () => {
       const y = window.scrollY;
-      const fullDimThreshold = Math.min(y / 256, 1);
+      const maxDim = 0.85
+      const fullDimThreshold = Math.min(y / 256, maxDim);
       const value = initialDim + (1 - initialDim) * fullDimThreshold;
       setDim(value);
     };
