@@ -71,8 +71,9 @@ export function PhotoSlider({ photos }: PhotoSliderProps) {
             bg-black/30 hover:bg-black/50
             text-(--text-primary) rounded-full
             p-1.5 md:p-2
-            hover:scale-105 active:scale-98
+            hover:scale-110 active:scale-98
             text-2xl md:text-4xl lg:text-6xl
+            cursor-pointer
         "
         aria-label="Previous photo"
       >
@@ -88,8 +89,9 @@ export function PhotoSlider({ photos }: PhotoSliderProps) {
             bg-black/30 hover:bg-black/50
             text-(--text-primary) rounded-full
             p-1.5 md:p-2
-            hover:scale-105 active:scale-98
+            hover:scale-110 active:scale-98
             text-2xl md:text-4xl lg:text-6xl
+            cursor-pointer
         "
         aria-label="Next photo"
       >

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { Container } from "@/components/Container";
 
-
 type GalleryImage = {
   src: string;
   alt: string;
@@ -16,10 +15,15 @@ type PhotoGalleryProps = {
 
 export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [visible, setVisible] = useState(false);
 
   const closeModal = useCallback(() => {
-    setActiveIndex(null);
+    setVisible(false);
   }, []);
+
+  const handleTransitionEnd = useCallback(() => {
+    if (!visible) setActiveIndex(null);
+  }, [visible]);
 
   const prevImage = useCallback(() => {
     setActiveIndex((prev) =>
@@ -38,53 +42,34 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (activeIndex === null) return;
-
       if (e.key === "Escape") closeModal();
       if (e.key === "ArrowLeft") prevImage();
       if (e.key === "ArrowRight") nextImage();
     };
-
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeIndex, closeModal, prevImage, nextImage]);
 
   return (
     <>
-    <Container className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
+      <Container className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
         {galleryImages.map((image, index) => (
           <button
             key={image.src}
-            onClick={() => setActiveIndex(index)}
-            className="
-              group
-              relative
-              aspect-square
-              overflow-hidden
-              cursor-pointer
-            "
+            onClick={() => {
+              setActiveIndex(index);
+              requestAnimationFrame(() => setVisible(true));
+            }}
+            className="group relative aspect-square overflow-hidden cursor-pointer"
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
               sizes="(max-width: 768px) 50vw, 33vw"
-              className="
-                object-cover
-                transition duration-500
-                group-hover:scale-105
-              "
+              className="object-cover transition duration-500 group-hover:scale-105"
             />
-
-            <div
-              className="
-                absolute inset-0
-                bg-black/40
-                opacity-0
-                group-hover:opacity-100
-                transition
-                flex items-center justify-center
-              "
-            >
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
               <span className="text-(--text-primary) text-4xl font-light">
                 +
               </span>
@@ -96,21 +81,13 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
       {activeIndex !== null && (
         <div
           onClick={closeModal}
-          className="
-            fixed inset-0 z-50
-            bg-black/90
-            flex items-center justify-center
-            animate-in fade-in duration-300
-          "
+          onTransitionEnd={handleTransitionEnd}
+          style={{ transition: "opacity 300ms ease", opacity: visible ? 1 : 0 }}
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
         >
           <button
             onClick={closeModal}
-            className="
-              absolute top-6 right-6
-              text-(--text-primary) text-4xl z-50
-              hover:text-(--accent-primary)
-              transition
-            "
+            className="absolute top-6 right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition cursor-pointer"
           >
             ×
           </button>
@@ -120,24 +97,19 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
               e.stopPropagation();
               prevImage();
             }}
-            className="
-              absolute left-6
-              text-(--text-primary) text-6xl z-50
-              hover:text-(--accent-primary)
-              transition
-            "
+            className="absolute left-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer"
           >
             ‹
           </button>
 
           <div
             onClick={(e) => e.stopPropagation()}
-            className="
-              relative
-              w-[90vw]
-              h-[85vh]
-              animate-in zoom-in-95 duration-300
-            "
+            style={{
+              transition: "transform 300ms ease, opacity 300ms ease",
+              transform: visible ? "scale(1)" : "scale(0.95)",
+              opacity: visible ? 1 : 0,
+            }}
+            className="relative w-[90vw] h-[85vh]"
           >
             <Image
               src={galleryImages[activeIndex].src}
@@ -153,12 +125,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
               e.stopPropagation();
               nextImage();
             }}
-            className="
-              absolute right-6
-              text-(--text-primary) text-6xl z-50
-              hover:text-(--accent-primary)
-              transition
-            "
+            className="absolute right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer"
           >
             ›
           </button>

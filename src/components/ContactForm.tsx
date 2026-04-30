@@ -152,6 +152,7 @@ export function ContactForm({
             hover:bg-(--accent-primary)
             hover:text-(--bg-primary)
             disabled:opacity-50
+            cursor-pointer
             "
         >
           {loading ? t.sending : t.send}
