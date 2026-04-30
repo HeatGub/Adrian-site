@@ -22,7 +22,7 @@ export default function PLPage() {
         alt="test"
         overlayText="NEWS & PRESS"
       />
-      <Section className="py-4">
+      <Section className="py-4 bg-(--bg-secondary)">
         <h1 className="text-center text-4xl tracking-wider pb-4">RECENZJE</h1>
         <Image
           src="/images/CCF30042022_0001.jpg"

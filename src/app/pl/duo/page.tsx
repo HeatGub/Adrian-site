@@ -23,9 +23,10 @@ export default function PLPage() {
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
             imageAlt="duo+"
-            imageSide="left"
+            imageSide="right"
+            textClassName="leading-normal"
           >
-            <div className="space-y-4 font-(family-name:--font-secondary) font-light">
+            <div className="space-y-4">
               <p>
                 Choć Magdalena pochodzi z Polski, a Adrian z Rumunii, to jednak
                 ich drogi się zeszły. Muzycy poznali się w Wiedniu, gdzie oboje

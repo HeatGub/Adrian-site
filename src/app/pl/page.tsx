@@ -21,7 +21,7 @@ export const homeContentPL: HomePageTemplateProps = {
   ],
   sections: [
     {
-      className: "bg-(--bg-secondary)",
+      className: "bg-(--bg-secondary) py-8",
       blocks: [
         {
           imageSrc: "/images/gl2.jpg",
@@ -57,7 +57,7 @@ export const homeContentPL: HomePageTemplateProps = {
     },
 
     {
-      className: "bg-(--bg-tertiary)",
+      className: "bg-(--bg-tertiary) py-8",
       blocks: [
         {
           imageSrc: "/images/DUO2zm.jpg",

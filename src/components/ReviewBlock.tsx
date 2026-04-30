@@ -28,12 +28,12 @@ export function ReviewBlock({
     >
       <blockquote
         className={`
-          md:text-lg
           leading-relaxed
           tracking-wide
           font-light
-          ${translatedQuote ? "italic" : ""}
-          ${translatedQuote ? "" : "font-(family-name:--font-secondary)"}  
+          italic
+          ${translatedQuote ? "" : "font-(family-name:--font-secondary)"}
+          ${translatedQuote ? "text-sm md:text-base" : "md:text-lg"}
         `}
       >
         „{originalQuote}”
@@ -47,6 +47,7 @@ export function ReviewBlock({
           tracking-wide
           font-(family-name:--font-secondary)
           font-light
+          italic
         "
         >
           „{translatedQuote}”
@@ -61,7 +62,7 @@ export function ReviewBlock({
             text-left
             text-xs md:text-sm
             text-(--text-secondary)
-            font-medium
+            font-normal
             overflow-hidden
             italic
             pr-1
@@ -76,7 +77,7 @@ export function ReviewBlock({
           text-sm md:text-base
           tracking-[0.12em]
           text-(--text-secondary)
-          font-medium
+          font-normal
         "
         >
           — {author}

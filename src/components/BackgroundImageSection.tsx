@@ -39,7 +39,7 @@ export function BackgroundImageSection({
 
       {/* Content */}
       <Section
-        className={`relative z-20 py-8 lg:py-16 font-light font-(family-name:--font-secondary) tracking-wide leading-relaxed`}
+        className={`relative z-20 py-8 lg:py-16 font-light font-(family-name:--font-secondary) tracking-wide leading-loose lg:text-lg`}
       >
         <div className="space-y-6">{children}</div>
       </Section>

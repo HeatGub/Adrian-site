@@ -23,9 +23,10 @@ export default function ENPage() {
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
             imageAlt="duo+"
-            imageSide="left"
+            imageSide="right"
+            textClassName="leading-normal"
           >
-            <div className="space-y-4 font-(family-name:--font-secondary) font-light">
+            <div className="space-y-4">
               <p>
                 Although Magdalena grew up in Poland and Adrian in Romania,
                 music brought them together. Their paths crossed when the two
