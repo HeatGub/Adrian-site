@@ -72,10 +72,11 @@ export function PhotoSlider({ photos }: PhotoSliderProps) {
             text-(--text-primary) rounded-full
             p-1.5 md:p-2
             hover:scale-105 active:scale-98
+            text-2xl md:text-4xl lg:text-6xl
         "
         aria-label="Previous photo"
       >
-        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 xl:w-12 xl:h-12" />
+        ‹
       </button>
 
       <button
@@ -88,43 +89,12 @@ export function PhotoSlider({ photos }: PhotoSliderProps) {
             text-(--text-primary) rounded-full
             p-1.5 md:p-2
             hover:scale-105 active:scale-98
+            text-2xl md:text-4xl lg:text-6xl
         "
         aria-label="Next photo"
       >
-        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 xl:w-12 xl:h-12" />
+        ›
       </button>
     </div>
-  );
-}
-
-function ChevronLeft({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="15 18 9 12 15 6" />
-    </svg>
-  );
-}
-
-function ChevronRight({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="9 18 15 12 9 6" />
-    </svg>
   );
 }
