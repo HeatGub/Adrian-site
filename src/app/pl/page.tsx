@@ -14,12 +14,11 @@ import { HomePageTemplateProps } from "@/components/HomePageTemplate";
 import { DuoButton } from "@/components/DuoButton";
 
 export const homeContentPL: HomePageTemplateProps = {
-  hero: {
-    src: "/images/slide1.jpg",
-    alt: "Adrian",
-    overlayText: "STRONA GŁÓWNA",
-  },
-
+  photos: [
+    { src: "/images/AS5BWzm.jpg", alt: "1", focalClassName:"object-[center_50%]"},
+    { src: "/images/slide1-scaled.jpg", alt: "2", focalClassName:"object-[center_30%]"},
+    { src: "/images/slide2.jpg", alt: "3", focalClassName:"object-[center_35%]"},
+  ],
   sections: [
     {
       className: "bg-(--bg-secondary)",

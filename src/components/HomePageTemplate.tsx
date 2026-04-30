@@ -1,6 +1,7 @@
-import { HeroPhoto } from "@/components/HeroPhoto";
 import { Section } from "@/components/Section";
 import { ImageTextBlock } from "@/components/ImageTextBlock";
+import { PhotoSlider } from "@/components/PhotoSlider";
+import type { SliderPhoto } from "@/components/PhotoSlider"
 
 export type Block = {
   imageSrc: string;
@@ -15,25 +16,14 @@ export type SectionData = {
 };
 
 export type HomePageTemplateProps = {
-  hero: {
-    src: string;
-    alt: string;
-    overlayText: string;
-  };
+  photos: SliderPhoto[];
   sections: SectionData[];
 };
-export default function HomePageTemplate({
-  hero,
-  sections,
-}: HomePageTemplateProps) {
+
+export default function HomePageTemplate({ photos, sections }: HomePageTemplateProps) {
   return (
     <main>
-      <HeroPhoto
-        src={hero.src}
-        alt={hero.alt}
-        overlayText={hero.overlayText}
-      />
-
+      <PhotoSlider photos={photos}/>
       {sections.map((section, i) => (
         <Section key={i} className={section.className}>
           {section.blocks.map((block, j) => (
