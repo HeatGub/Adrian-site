@@ -8,6 +8,25 @@
   --text-secondary: #d1d1d1;
   --accent-primary: #bea255;
   --border-default: #979797;
+  --bg-gradient-primary: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 50%,
+    var(--bg-primary) 90%
+  );
+  --bg-gradient-secondary: linear-gradient(
+    135deg,
+    var(--bg-secondary) 20%,
+    var(--bg-primary) 50%,
+    var(--bg-secondary) 80%
+  );
+  --bg-gradient-tertiary: linear-gradient(
+    135deg,
+    var(--bg-tertiary) 30%,
+    var(--bg-primary) 50%,
+    var(--bg-tertiary) 90%
+  );
+
 }
 
 html,

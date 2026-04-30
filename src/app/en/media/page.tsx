@@ -29,7 +29,7 @@ export const galleryImages = [
 
 export default function ENPage() {
   return (
-    <main>
+    <main className="bg-(image:--bg-gradient-tertiary)">
       <HeroPhoto
         src="/images/AS5zm.jpg"
         alt="test"

@@ -14,7 +14,7 @@ import { ContactForm } from "@/components/ContactForm"
 
 export default function PLPage() {
   return (
-    <main>
+    <main className="bg-(image:--bg-gradient-primary)">
       <HeroPhoto src="/images/naglowek4-1.jpg" alt="test" overlayText="KONTAKT" focalClassName="object-[center_20%]"/>
       <ContactForm language="pl"/>
     </main>

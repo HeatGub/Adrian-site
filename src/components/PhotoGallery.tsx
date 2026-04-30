@@ -52,7 +52,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
 
   return (
     <>
-      <Container className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
+      <Container className="grid grid-cols-2 md:grid-cols-3 gap-4 py-8 lg:py-12">
         {galleryImages.map((image, index) => (
           <button
             key={image.src}

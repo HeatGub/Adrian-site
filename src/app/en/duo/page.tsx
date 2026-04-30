@@ -18,7 +18,7 @@ export default function ENPage() {
   return (
     <>
       <HeroPhoto src="/images/naglowek4.jpg" alt="test" overlayText="DUO+" focalClassName="object-[center_40%]"/>
-      <main className="bg-(--bg-secondary) py-4">
+      <main className="py-4 bg-(image:--bg-gradient-tertiary)">
         <Container>
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
