@@ -24,10 +24,10 @@ export default function Footer() {
         {/* Logo */}
         <Link href={`/${locale}`}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo_new_medium.png"
             alt="Adrian Stanciu"
-            width={72}
-            height={52}
+            width={60}
+            height={40}
             priority
             className="w-auto h-auto"
           />

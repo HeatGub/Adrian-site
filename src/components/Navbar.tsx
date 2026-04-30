@@ -62,7 +62,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href={`/${locale}`} className="shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_new_small.png"
               alt="Adrian Stanciu"
               width={72}
               height={52}
