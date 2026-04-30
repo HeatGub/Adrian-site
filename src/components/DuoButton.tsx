@@ -24,6 +24,7 @@ export function DuoButton({ label }: { label: string }) {
         hover:bg-(--accent-primary)
         hover:text-(--bg-primary)
         hover:scale-105 active:scale-95
+        select-none
       "
     >
       {label}

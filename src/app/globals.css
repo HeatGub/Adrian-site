@@ -16,3 +16,41 @@ body {
   color: var(--text-primary);
   font-family: var(--font-primary);
 }
+
+input,
+textarea,
+select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Keep same styling during autofill / browser suggestions */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-primary);
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-secondary) inset;
+  box-shadow: 0 0 0px 1000px var(--bg-secondary) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Optional: normalize focus/validation browser styles */
+input:focus,
+textarea:focus,
+select:focus,
+input:valid,
+input:invalid {
+  color: var(--text-primary);
+}
+
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+}

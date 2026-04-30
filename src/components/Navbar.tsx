@@ -56,7 +56,7 @@ export default function Navbar() {
       />
 
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-(--border-default)/30">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-(--border-default)/30 select-none">
         <Container className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href={`/${locale}`} className="shrink-0">

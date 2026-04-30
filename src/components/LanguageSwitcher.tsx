@@ -13,7 +13,7 @@ const FLAGS: Record<Locale, string> = { en: "🇵🇱", pl: "🇬🇧" };
 const LABELS: Record<Locale, string> = { en: "Polski", pl: "English" };
 
 export default function LanguageSwitcher({
-  className = "text-(--text-secondary) hover:text-(--accent-primary) transition-colors text-xs tracking-widest font-medium",
+  className = "text-(--text-secondary) hover:text-(--accent-primary) transition-colors text-xs tracking-widest font-medium select-none",
   showLabel = false,
 }: LanguageSwitcherProps) {
   const pathname = usePathname();

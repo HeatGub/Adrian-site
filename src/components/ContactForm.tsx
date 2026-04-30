@@ -154,6 +154,7 @@ export function ContactForm({
             disabled:opacity-50
             hover:scale-105 active:scale-95
             cursor-pointer
+            select-none
             "
         >
           {loading ? t.sending : t.send}
