@@ -7,7 +7,7 @@ export interface NavLinkDef {
 }
 
 export const NAV_LINKS: NavLinkDef[] = [
-  { slug: "",           labelEn: "HOME",         labelPl: "STRONA GŁÓWNA"},
+  { slug: "",           labelEn: "HOME",         labelPl: "HOME"},
   { slug: "biography",  labelEn: "BIOGRAPHY",    labelPl: "BIOGRAFIA"    },
   { slug: "news-press", labelEn: "NEWS & PRESS", labelPl: "NEWS & PRESS" },
   { slug: "media",      labelEn: "MEDIA",        labelPl: "MEDIA"        },
