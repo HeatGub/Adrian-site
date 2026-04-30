@@ -23,7 +23,7 @@ export default function PLPage() {
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
             imageAlt="duo+"
-            imageSide="right"
+            imageSide="left"
           >
             <div className="space-y-4 font-(family-name:--font-secondary) font-light">
               <p>

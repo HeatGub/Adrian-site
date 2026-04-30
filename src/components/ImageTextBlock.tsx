@@ -25,8 +25,8 @@ export function ImageTextBlock({
   return (
     <div
       className={`
-        flex flex-col md:flex-row items-center gap-4 md:gap-10 lg:gap-16 py-8
-        ${!imageFirst ? "md:flex-row-reverse" : ""}
+        flex flex-col lg:flex-row items-center gap-4 md:gap-8 lg:gap-12 py-8
+        ${!imageFirst ? "lg:flex-row-reverse" : ""}
         ${className}
       `}
     >
@@ -42,10 +42,7 @@ export function ImageTextBlock({
             src={imageSrc}
             alt={imageAlt}
             fill
-            sizes="
-              (max-width: 768px) 100vw,
-              55vw
-            "
+            sizes="(max-width: 1024px) 100vw, 55vw"
             className="object-cover"
           />
         </div>
