@@ -28,7 +28,7 @@ export default function Footer() {
             alt="Adrian Stanciu"
             width={72}
             height={52}
-            priority          // load eagerly — it's above the fold
+            priority
             className="w-auto h-auto"
           />
         </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
           <NavLinks
             wrapperClassName="flex flex-wrap justify-center gap-x-8 gap-y-3"
-            itemClassName="text-xs tracking-[0.18em] font-medium"
+            itemClassName="text-sm tracking-[0.1em] lg:tracking-[0.15em] font-medium"
           />
           <LanguageSwitcher />
         </div>

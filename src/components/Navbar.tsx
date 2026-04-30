@@ -58,12 +58,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center justify-between flex-1 ml-12">
+          <nav className="hidden md:flex items-center justify-between flex-1 ml-8 md:ml-8 lg:ml-16 xl:ml-20">
             <NavLinks
               wrapperClassName="flex items-center justify-between flex-1"
-              itemClassName="text-xs tracking-[0.18em] font-medium"
+              itemClassName="text-sm tracking-[0.01em] sm:tracking-[0.05em] lg:tracking-[0.2em] font-medium"
             />
-            <LanguageSwitcher className="md:ml-12 lg:ml-18" />
+            <LanguageSwitcher className="ml-8 md:ml-8 lg:ml-16 xl:ml-20"/>
           </nav>
 
           {/* Mobile menu button */}

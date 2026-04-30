@@ -9,7 +9,7 @@ interface LanguageSwitcherProps {
   showLabel?: boolean;
 }
 
-const FLAGS: Record<Locale, string> = { en: "🇬🇧", pl: "🇵🇱" };
+const FLAGS: Record<Locale, string> = { en: "🇵🇱", pl: "🇬🇧" };
 const LABELS: Record<Locale, string> = { en: "English", pl: "Polski" };
 
 export default function LanguageSwitcher({
