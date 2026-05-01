@@ -21,7 +21,7 @@ export const homeContentPL: HomePageTemplateProps = {
   ],
   sections: [
     {
-      className: "py-8 bg-(image:--bg-gradient-primary)",
+      className: "py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 bg-(image:--bg-gradient-primary)",
       blocks: [
         {
           imageSrc: "/images/gl2.jpg",
@@ -57,7 +57,7 @@ export const homeContentPL: HomePageTemplateProps = {
     },
 
     {
-      className: "py-8 bg-(image:--bg-gradient-tertiary)",
+      className: "py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 bg-(image:--bg-gradient-tertiary)",
       blocks: [
         {
           imageSrc: "/images/DUO2zm.jpg",
@@ -65,7 +65,7 @@ export const homeContentPL: HomePageTemplateProps = {
           imageSide: "left",
           content: (
             <>
-              <p className="text-2xl tracking-wider">
+              <p className="text-2xl tracking-wider font-(family-name:--font-primary) text-(--text-secondary)">
                 Jeśli chcesz dowiedzieć się czegoś więcej o drugiej osobie z
                 DUO+
               </p>

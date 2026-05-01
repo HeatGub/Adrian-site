@@ -24,7 +24,7 @@ export default function PLPage() {
             imageSrc="/images/DUO2zm.jpg"
             imageAlt="duo+"
             imageSide="right"
-            textClassName="leading-normal"
+            textClassName="leading-normal md:leading-normal"
           >
             <div className="space-y-4">
               <p>

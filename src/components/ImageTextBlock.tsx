@@ -25,7 +25,7 @@ export function ImageTextBlock({
   return (
     <div
       className={`
-        flex flex-col lg:flex-row items-center gap-4 md:gap-8 lg:gap-12 py-8
+        flex flex-col lg:flex-row items-center gap-4 md:gap-8 lg:gap-12 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12
         ${!imageFirst ? "lg:flex-row-reverse" : ""}
         ${className}
       `}
@@ -54,7 +54,8 @@ export function ImageTextBlock({
           w-full
           flex items-center
           text-justify
-          leading-loose
+          leading-relaxed
+          md:leading-loose
           font-(family-name:--font-secondary)
           font-light
           lg:text-lg

@@ -28,7 +28,7 @@ export function BackgroundImageSection({
             object-cover
             object-center
             blur-[2px]
-            brightness-[0.25]
+            brightness-[0.15]
             saturate-[0.7]
             scale-105
           "
@@ -39,7 +39,7 @@ export function BackgroundImageSection({
 
       {/* Content */}
       <Section
-        className={`relative z-20 py-8 lg:py-16 font-light font-(family-name:--font-secondary) tracking-wide leading-loose lg:text-lg`}
+        className={`relative z-20 py-8 lg:py-16 font-light font-(family-name:--font-secondary) tracking-wide leading-relaxed md:leading-loose lg:text-lg`}
       >
         <div className="space-y-6">{children}</div>
       </Section>
