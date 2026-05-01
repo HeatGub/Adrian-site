@@ -13,6 +13,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
   },
+    icons: {
+    icon: '/images/logo_new_small.png',
+  },
 };
 
 import "./globals.css";

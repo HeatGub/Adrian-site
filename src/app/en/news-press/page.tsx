@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home",
+  title: "News & press",
   description: "Official website of Adrian Stanciu",
   alternates: {
     canonical: "/en",
