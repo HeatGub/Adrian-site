@@ -18,6 +18,7 @@ export default function Navbar() {
   const [menuMounted, setMenuMounted] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const initialDim = 0.4;
+  const maxDim = 0.85
   const [dim, setDim] = useState(initialDim);
 
   const openMenu = () => {
@@ -38,7 +39,6 @@ export default function Navbar() {
   useEffect(() => {
     const calculateDim = () => {
       const y = window.scrollY;
-      const maxDim = 0.85
       const fullDimThreshold = Math.min(y / 256, maxDim);
       const value = initialDim + (1 - initialDim) * fullDimThreshold;
       setDim(value);
@@ -53,7 +53,7 @@ export default function Navbar() {
       {/* BACKDROP DIM LAYER */}
       <div
         className="fixed top-0 left-0 right-0 h-20 z-40 pointer-events-none transition-colors duration-300"
-        style={{ backgroundColor: `rgba(0, 0, 0, ${dim})` }}
+        style={{ backgroundColor: `rgba(0, 0, 0, ${menuOpen ? 1 : dim})` }}
       />
 
       {/* NAVBAR */}
