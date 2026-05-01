@@ -71,7 +71,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
               <span className="text-(--text-primary) text-4xl font-light">
-                +
+                <MagnifyingGlassIcon className="w-12 h-12 text-(--text-secondary)"/>
               </span>
             </div>
           </button>
@@ -87,7 +87,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
         >
           <button
             onClick={closeModal}
-            className="absolute top-6 right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition cursor-pointer"
+            className="absolute top-6 right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer"
           >
             ×
           </button>
@@ -97,7 +97,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute left-2 md:left-4 lg:left-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer rounded-full"
           >
             ‹
           </button>
@@ -109,13 +109,13 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
               transform: visible ? "scale(1)" : "scale(0.95)",
               opacity: visible ? 1 : 0,
             }}
-            className="relative w-[90vw] h-[85vh]"
+            className="relative w-[99vw] h-[99vh]"
           >
             <Image
               src={galleryImages[activeIndex].src}
               alt={galleryImages[activeIndex].alt}
               fill
-              sizes="90vw"
+              sizes="99vw"
               className="object-contain"
             />
           </div>
@@ -125,7 +125,7 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer"
+            className="absolute right-2 md:right-4 lg:right-6 text-(--text-primary) text-5xl sm:text-6xl lg:text-7xl z-50 hover:text-(--accent-primary) transition hover:scale-110 active:scale-95 cursor-pointer rounded-full"
           >
             ›
           </button>
@@ -136,5 +136,44 @@ export function PhotoGallery({ galleryImages }: PhotoGalleryProps) {
         </div>
       )}
     </>
+  );
+}
+
+function MagnifyingGlassIcon({
+  className = "w-6 h-6",
+}: {
+  className?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <circle
+        cx="28"
+        cy="28"
+        r="16"
+        stroke="currentColor"
+        strokeWidth="4"
+      />
+      <line
+        x1="39.5"
+        y1="39.5"
+        x2="54"
+        y2="54"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <circle
+        cx="23"
+        cy="23"
+        r="3"
+        fill="currentColor"
+        opacity="0.25"
+      />
+    </svg>
   );
 }
