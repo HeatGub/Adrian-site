@@ -75,10 +75,10 @@ export function ContactForm({
 
     try {
       await emailjs.send(
-        "service_312g9rl",
-        "template_miol5xw",
+        "service_xfl3cmb",
+        "template_2y7vuyx",
         params,
-        "614CUwsKdMD6lEANQ",
+        "uLJSzk-vddJXSimwv",
       );
 
       setStatus("success");
