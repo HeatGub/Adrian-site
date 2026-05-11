@@ -18,14 +18,14 @@ export default function ENPage() {
     <main>
       <HeroPhoto
         src="/images/naglowek2.jpg"
-        alt="test"
+        alt="Adrian Stanciu posing with a viola against the backdrop of a studio."
         srcSmall="/images/naglowek2-1.jpg"
-        altSmall="test"
+        altSmall="Adrian Stanciu looking at the world through the eyes of a musician."
         overlayText="BIOGRAPHY"
         focalClassName="object-[center_0%]"
         focalClassNameSmall="object-[center_0%]"
       />
-      <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="EN">
+      <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="Adrian Stanciu during a concert with other musicians, photography by Simon Buchou.">
         <p>
           Adrian Stanciu was born in Iaşi, Romania, into a family with a long
           musical tradition. At the age of six, he began taking violin lessons

@@ -18,14 +18,14 @@ export default function PLPage() {
     <main>
       <HeroPhoto
         src="/images/naglowek2.jpg"
-        alt="test"
+        alt="Adrian Stanciu pozujący z altówką na studyjnym tle."
         srcSmall="/images/naglowek2-1.jpg"
-        altSmall="test"
+        altSmall="Adrian Stanciu spoglądający na świat okiem muzyka."
         overlayText="BIOGRAFIA"
         focalClassName="object-[center_0%]"
         focalClassNameSmall="object-[center_0%]"
       />
-      <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="EN">
+      <BackgroundImageSection imageSrc="/images/biografia1.jpg" imageAlt="Adrian Stanciu podczas koncertu z innymi muzykami, na zdjęciu Simona Buchou.">
         <p>
           Adrian Stanciu urodził się w Jassach w Rumunii, w rodzinie z
           wieloletnią tradycją muzyczną. Już jako sześciolatek pobierał lekcje

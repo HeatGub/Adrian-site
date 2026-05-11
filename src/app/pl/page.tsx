@@ -16,9 +16,9 @@ import { DuoButton } from "@/components/DuoButton";
 
 export const homeContentPL: HomePageTemplateProps = {
   photos: [
-    { src: "/images/AS5BWzm.jpg", alt: "1", focalClassName:"object-[center_50%]"},
-    { src: "/images/slide1-scaled.jpg", alt: "2", focalClassName:"object-[center_30%]"},
-    { src: "/images/slide2.jpg", alt: "3", focalClassName:"object-[center_35%]"},
+    { src: "/images/AS5BWzm.jpg", alt: "Adrian Stanciu grający na altówce.", focalClassName:"object-[center_50%]"},
+    { src: "/images/slide1-scaled.jpg", alt: "Adrian Stanciu trzymający altówkę.", focalClassName:"object-[center_30%]"},
+    { src: "/images/slide2.jpg", alt: "Adrian Stanciu pozujący z altówką.", focalClassName:"object-[center_35%]"},
   ],
   sections: [
     {
@@ -26,7 +26,7 @@ export const homeContentPL: HomePageTemplateProps = {
       blocks: [
         {
           imageSrc: "/images/gl2.jpg",
-          imageAlt: "Adrian",
+          imageAlt: "Adrian Stanciu pozujący z altówką na beżowym tle.",
           imageSide: "left",
           content: (
             <p className="tracking-wider">
@@ -39,7 +39,7 @@ export const homeContentPL: HomePageTemplateProps = {
         },
         {
           imageSrc: "/images/gl1.jpg",
-          imageAlt: "Adrian",
+          imageAlt: "Adrian Stanciu pozujący z altówką na tle opery i filharmonii.",
           imageSide: "right",
           content: (
             <p className="tracking-wider">
@@ -62,7 +62,7 @@ export const homeContentPL: HomePageTemplateProps = {
       blocks: [
         {
           imageSrc: "/images/DUO2zm.jpg",
-          imageAlt: "Adrian",
+          imageAlt: "Adrian i Magdalena Stanciu - muzyczny duet pozujący do wspólnego zdjęcia.",
           imageSide: "left",
           content: (
             <>

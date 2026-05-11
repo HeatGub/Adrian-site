@@ -18,12 +18,12 @@ import { Container } from "@/components/Container";
 export default function ENPage() {
   return (
     <>
-      <HeroPhoto src="/images/naglowek4.jpg" alt="test" overlayText="DUO+" focalClassName="object-[center_40%]"/>
+      <HeroPhoto src="/images/naglowek4.jpg" alt="Adrian and Magdalena Stanciu in a family photo." overlayText="DUO+" focalClassName="object-[center_40%]"/>
       <main className="py-8 bg-(image:--bg-gradient-tertiary)">
         <Container>
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
-            imageAlt="duo+"
+            imageAlt="Adrian and Magdalena Stanciu – a musical duo (DUO+) posing for a photo together."
             imageSide="right"
             textClassName="leading-normal md:leading-normal"
           >

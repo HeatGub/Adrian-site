@@ -20,14 +20,14 @@ export default function PLPage() {
     <main>
       <HeroPhoto
         src="/images/naglowek2-1.jpg"
-        alt="test"
+        alt="Adrian Stanciu trzymający altówkę, spoglądający na świat okiem muzyka."
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4 bg-(image:--bg-gradient-secondary)">
         <h1 className="text-center text-4xl tracking-wider py-8">RECENZJE</h1>
         <Image
           src="/images/CCF30042022_0001.jpg"
-          alt="artykuł"
+          alt="Artykuł z gazety Łomżyńskiej na temat muzyka altowiolisty Adriana Stanciu."
           width={1712}
           height={200}
           className="w-full h-auto"

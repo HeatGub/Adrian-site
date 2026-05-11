@@ -18,12 +18,12 @@ import { Container } from "@/components/Container";
 export default function PLPage() {
   return (
     <>
-      <HeroPhoto src="/images/naglowek4.jpg" alt="test" overlayText="DUO+" focalClassName="object-[center_40%]"/>
+      <HeroPhoto src="/images/naglowek4.jpg" alt="Adrian i Magdalena Stanciu na wspólnym, rodzinnym zdjęciu." overlayText="DUO+" focalClassName="object-[center_40%]"/>
       <main className="py-8 bg-(image:--bg-gradient-tertiary)">
         <Container>
           <ImageTextBlock
             imageSrc="/images/DUO2zm.jpg"
-            imageAlt="duo+"
+            imageAlt="Adrian i Magdalena Stanciu - muzyczny duet (DUO+) pozujący do wspólnego zdjęcia."
             imageSide="right"
             textClassName="leading-normal md:leading-normal"
           >

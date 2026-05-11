@@ -20,14 +20,14 @@ export default function ENPage() {
     <main>
       <HeroPhoto
         src="/images/naglowek2-1.jpg"
-        alt="test"
+        alt="Adrian Stanciu holding his viola, looking at the world through a musician's eye."
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4 bg-(image:--bg-gradient-secondary)">
         <h1 className="text-center text-4xl tracking-wider py-8">REVIEWS</h1>
         <Image
           src="/images/CCF30042022_0001.jpg"
-          alt="article"
+          alt="An article from the Łomża newspaper about the musician and violist Adrian Stanciu."
           width={1712}
           height={200}
           className="w-full h-auto"
