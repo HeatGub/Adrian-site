@@ -10,8 +10,8 @@ import Image from "next/image";
 import { Container } from "@/components/Container"
 
 const footerText = {
-  "en": "Copyright © 2022 Adrian Stanciu All rights reserved | Design and development:",
-  "pl":  "Copyright © 2022 Adrian Stanciu Wszystkie prawa zastrzeżone | Projekt i wykonanie:"
+  "en": "Copyright © 2026 Adrian Stanciu All rights reserved | Design and development: ",
+  "pl":  "Copyright © 2026 Adrian Stanciu Wszystkie prawa zastrzeżone | Projekt i wykonanie: "
 }
 
 export default function Footer() {
@@ -28,7 +28,6 @@ export default function Footer() {
             alt="Adrian Stanciu"
             width={60}
             height={40}
-            priority
             className="w-auto h-auto"
           />
         </Link>
@@ -46,14 +45,13 @@ export default function Footer() {
         <SocialLinks />
 
         {/* Copyright */}
-        <p className="text-[11px] tracking-wide text-(--border-default) text-center">
+        <p className="text-[11px] font-light tracking-wide text-(--border-default) text-center">
          {locale === 'en'? footerText.en : footerText.pl}
-          <a
-            href="#"
-            className="underline hover:text-(--accent-primary) transition-colors"
+          <span
+            className="font-bold hover:text-(--accent-primary) transition-colors cursor-default"
           >
-            {" "}P.T.
-          </a>
+            Piotr T.
+          </span>
         </p>
       </Container>
     </footer>

@@ -23,21 +23,21 @@ const DEFAULT_LINKS: SocialLinkDef[] = [
 export default function SocialLinks({
   links = DEFAULT_LINKS,
   className = "flex items-center gap-5",
-  itemClassName = "w-9 h-9 rounded-full border border-(--border-default)/40 flex items-center justify-center text-(--text-secondary) hover:border-(--accent-primary) hover:text-(--accent-primary) transition-all duration-200",
+  itemClassName = "w-9 h-9 rounded-full border-2 border-(--border-default)/40 flex items-center justify-center text-(--text-secondary)/40 hover:border-(--accent-primary-dimmed) hover:text-(--accent-primary-dimmed) transition-all duration-200",
 }: SocialLinksProps) {
   return (
     <div className={className}>
       {links.map((link) => (
-        <a
+        <span
           key={link.label}
-          href={link.href}
-          target="_blank"
+          // href={link.href}
+          // target="_blank"
           rel="noopener noreferrer"
           aria-label={link.label}
           className={itemClassName}
         >
           {link.icon}
-        </a>
+        </span>
       ))}
     </div>
   );
