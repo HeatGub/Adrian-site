@@ -15,9 +15,6 @@ export const metadata: Metadata = {
       "en-US": "/en" // Self-reference is best practice
     },
   },
-  icons: {
-    icon: "/images/logo_new_small.png",
-  },
   openGraph: {
     title: "Adrian Stanciu | Professional Violist",
     description: "Official website of Adrian Stanciu, professional musician and violist.",

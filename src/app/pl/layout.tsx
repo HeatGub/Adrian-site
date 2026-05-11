@@ -15,9 +15,6 @@ export const metadata: Metadata = {
       "pl-PL": "/pl" 
     },
   },
-  icons: {
-    icon: "/images/logo_new_small.png",
-  },
   openGraph: {
     title: "Adrian Stanciu | Altowiolista",
     description: "Oficjalna strona Adriana Stanciu, profesjonalnego muzyka i altowiolisty.",
