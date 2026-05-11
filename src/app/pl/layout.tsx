@@ -2,15 +2,47 @@ import { Metadata } from "next";
 import BaseLayout from "@/components/BaseLayout";
 
 export const metadata: Metadata = {
-  title: "Adrian Stanciu - Altowiolista",
-  description: "Oficjalna strona Adriana Stanciu, muzyka i altowiolisty.",
-  alternates: {
-    canonical: "https://adrian-stanciu.vercel.app/pl",
-    languages: { "en-US": "https://adrian-stanciu.vercel.app/en" },
+  title: {
+    default: "Adrian Stanciu - Altowiolista",
+    template: "%s | Adrian Stanciu"
   },
-  // ... other metadata
+  description: "Oficjalna strona Adriana Stanciu, profesjonalnego muzyka i altowiolisty.",
+  metadataBase: new URL("https://adrian-stanciu.vercel.app"),
+  alternates: {
+    canonical: "/pl",
+    languages: { 
+      "en-US": "/en",
+      "pl-PL": "/pl" 
+    },
+  },
   icons: {
     icon: "/images/logo_new_small.png",
+  },
+  openGraph: {
+    title: "Adrian Stanciu | Altowiolista",
+    description: "Oficjalna strona Adriana Stanciu, profesjonalnego muzyka i altowiolisty.",
+    url: "https://adrian-stanciu.vercel.app/pl",
+    siteName: "Adrian Stanciu",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Adrian Stanciu - Altowiolista",
+      },
+    ],
+    locale: "pl_PL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adrian Stanciu | Altowiolista",
+    description: "Profesjonalny muzyk i altowiolista.",
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
