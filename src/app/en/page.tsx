@@ -1,10 +1,11 @@
 export const metadata = {
-  title: "Home",
-  description: "Official website of Adrian Stanciu",
+  title: "Adrian Stanciu | Official Website",
+  description: "Explore the world of Adrian Stanciu, a professional violist and musician. Discover concert highlights, chamber music projects like DUO+, and a rich portfolio of international performances.",
   alternates: {
     canonical: "/en",
     languages: {
-      pl: "/pl",
+      "en-US": "/en",
+      "pl-PL": "/pl",
     },
   },
 };

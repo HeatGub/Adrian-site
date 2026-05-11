@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Biografia",
-  description: "Official website of Adrian Stanciu",
+  description: "Poznaj drogę artystyczną, nagrody i międzynarodową karierę altowiolisty Adriana Stanciu.",
   alternates: {
-    canonical: "/en",
+    canonical: "/pl/biografia",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/biography",
+      "pl-PL": "/pl/biography",
     },
   },
 };

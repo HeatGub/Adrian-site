@@ -1,10 +1,11 @@
 export const metadata = {
-  title: "News & press",
-  description: "Official website of Adrian Stanciu",
+  title: "News & Press",
+  description: "Recenzje i wzmianki prasowe o Adrianie Stanciu. Przeczytaj opinie krytyków muzycznych, w tym Wojciecha Chamryka i Siegfrieda Kouby.",
   alternates: {
-    canonical: "/en",
+    canonical: "/pl/news-press",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/news-press",
+      "pl-PL": "/pl/news-press",
     },
   },
 };

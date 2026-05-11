@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Duo +",
-  description: "Official website of Adrian Stanciu",
+  description: "Discover DUO+, a captivating musical collaboration between soprano Magdalena and violist Adrian Stanciu, featuring a diverse repertoire and guest artists.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/duo",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/duo",
+      "pl-PL": "/pl/duo",
     },
   },
 };

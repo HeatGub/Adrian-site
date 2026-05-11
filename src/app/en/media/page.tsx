@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Media",
-  description: "Official website of Adrian Stanciu",
+  description: "Browse the photo gallery and media portfolio of violist Adrian Stanciu, featuring concert highlights and professional portraits.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/media",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/media",
+      "pl-PL": "/pl/media",
     },
   },
 };

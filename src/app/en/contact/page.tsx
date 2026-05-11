@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Contact",
-  description: "Official website of Adrian Stanciu",
+  description: "Get in touch with Adrian Stanciu for bookings, collaborations, or masterclass inquiries.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/contact",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/contact",
+      "pl-PL": "/pl/contact",
     },
   },
 };

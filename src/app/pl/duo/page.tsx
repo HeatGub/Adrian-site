@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Duo +",
-  description: "Official website of Adrian Stanciu",
+  description: "Poznaj DUO+, wyjątkowy projekt muzyczny sopranistki Magdaleny i altowiolisty Adriana Stanciu, łączący różnorodny repertuar z udziałem zaproszonych artystów.",
   alternates: {
-    canonical: "/en",
+    canonical: "/pl/duo",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/duo",
+      "pl-PL": "/pl/duo",
     },
   },
 };

@@ -1,10 +1,11 @@
 export const metadata = {
-  title: "News & press",
-  description: "Official website of Adrian Stanciu",
+  title: "News & Press",
+  description: "Read critical acclaim and reviews for violist Adrian Stanciu. Featuring press coverage from Wojciech Chamryk, Siegfried Kouba, and international music critics.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/news-press",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/news-press",
+      "pl-PL": "/pl/news-press",
     },
   },
 };

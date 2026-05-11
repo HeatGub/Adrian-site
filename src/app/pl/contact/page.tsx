@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Kontakt",
-  description: "Official website of Adrian Stanciu",
+  description: "Skontaktuj się z Adrianem Stanciu w sprawie koncertów, współpracy lub lekcji mistrzowskich.",
   alternates: {
-    canonical: "/en",
+    canonical: "/pl/contact",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/contact",
+      "pl-PL": "/pl/contact",
     },
   },
 };

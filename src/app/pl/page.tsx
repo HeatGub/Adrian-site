@@ -1,10 +1,11 @@
 export const metadata = {
-  title: "Strona główna",
-  description: "Oficjalna strona Adriana Stanciu",
+  title: "Adrian Stanciu | Oficjalna Strona",
+  description: "Witaj na oficjalnej stronie Adriana Stanciu – profesjonalnego altowiolisty. Dowiedz się więcej o projektach kameralnych takich jak DUO+, nagraniach oraz międzynarodowej karierze muzycznej.",
   alternates: {
     canonical: "/pl",
     languages: {
-      en: "/en",
+      "en-US": "/en",
+      "pl-PL": "/pl",
     },
   },
 };

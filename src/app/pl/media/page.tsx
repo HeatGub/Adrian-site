@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Media",
-  description: "Official website of Adrian Stanciu",
+  description: "Zobacz galerię zdjęć i portfolio Adriana Stanciu – fotografie koncertowe oraz oficjalne portrety altowiolisty.",
   alternates: {
-    canonical: "/en",
+    canonical: "/pl/media",
     languages: {
-      pl: "/pl",
+      "en-US": "/en/media",
+      "pl-PL": "/pl/media",
     },
   },
 };

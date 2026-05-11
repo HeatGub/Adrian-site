@@ -1,10 +1,11 @@
 export const metadata = {
   title: "Biography",
-  description: "Official website of Adrian Stanciu",
+  description: "Learn about the musical journey, awards, and international career of violist Adrian Stanciu.",
   alternates: {
-    canonical: "/en",
+    canonical: "/en/biography",
     languages: {
-      pl: "/pl",
+      "pl-PL": "/pl/biography",
+      "en-US": "/en/biography",
     },
   },
 };
