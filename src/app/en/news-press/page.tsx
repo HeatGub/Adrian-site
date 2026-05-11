@@ -24,7 +24,7 @@ export default function ENPage() {
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4 bg-(image:--bg-gradient-secondary)">
-        <h1 className="text-center text-4xl tracking-wider py-8">REVIEWS</h1>
+        <h2 className="text-center text-4xl tracking-wider py-8">REVIEWS</h2>
         <Image
           src="/images/CCF30042022_0001.jpg"
           alt="An article from the Łomża newspaper about the musician and violist Adrian Stanciu."

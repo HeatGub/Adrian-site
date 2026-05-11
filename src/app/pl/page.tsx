@@ -15,6 +15,7 @@ import { HomePageTemplateProps } from "@/components/HomePageTemplate";
 import { DuoButton } from "@/components/DuoButton";
 
 export const homeContentPL: HomePageTemplateProps = {
+  lang: "pl",
   photos: [
     { src: "/images/AS5BWzm.jpg", alt: "Adrian Stanciu grający na altówce.", focalClassName:"object-[center_50%]"},
     { src: "/images/slide1-scaled.jpg", alt: "Adrian Stanciu trzymający altówkę.", focalClassName:"object-[center_30%]"},

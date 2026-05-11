@@ -24,7 +24,7 @@ export default function PLPage() {
         overlayText="NEWS & PRESS"
       />
       <Section className="py-4 bg-(image:--bg-gradient-secondary)">
-        <h1 className="text-center text-4xl tracking-wider py-8">RECENZJE</h1>
+        <h2 className="text-center text-4xl tracking-wider py-8">RECENZJE</h2>
         <Image
           src="/images/CCF30042022_0001.jpg"
           alt="Artykuł z gazety Łomżyńskiej na temat muzyka altowiolisty Adriana Stanciu."

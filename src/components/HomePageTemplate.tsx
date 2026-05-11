@@ -1,7 +1,8 @@
 import { Section } from "@/components/Section";
 import { ImageTextBlock } from "@/components/ImageTextBlock";
 import { PhotoSlider } from "@/components/PhotoSlider";
-import type { SliderPhoto } from "@/components/PhotoSlider"
+import type { SliderPhoto } from "@/components/PhotoSlider";
+import type { Locale } from "@/components/NavigationHelpers";
 
 export type Block = {
   imageSrc: string;
@@ -18,12 +19,23 @@ export type SectionData = {
 export type HomePageTemplateProps = {
   photos: SliderPhoto[];
   sections: SectionData[];
+  lang: Locale;
 };
 
-export default function HomePageTemplate({ photos, sections }: HomePageTemplateProps) {
+export default function HomePageTemplate({
+  photos,
+  sections,
+  lang,
+}: HomePageTemplateProps) {
   return (
     <main>
-      <PhotoSlider photos={photos}/>
+      {/* Hidden SEO Heading */}
+      <h1 className="sr-only">
+        {lang == "pl"
+          ? "Adrian Stanciu – Altowiolista, Solista i Muzyk Orkiestrowy"
+          : "Adrian Stanciu – International Violist, Soloist & Orchestral Musician"}
+      </h1>
+      <PhotoSlider photos={photos} />
       {sections.map((section, i) => (
         <Section key={i} className={section.className}>
           {section.blocks.map((block, j) => (

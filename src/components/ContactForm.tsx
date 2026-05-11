@@ -93,7 +93,7 @@ export function ContactForm({
 
   return (
     <Container className="text-center">
-      <h1 className="text-3xl my-8">{header ?? t.defaultHeader}</h1>
+      <h2 className="text-3xl my-8">{header ?? t.defaultHeader}</h2>
 
       <form
         onSubmit={handleSubmit}

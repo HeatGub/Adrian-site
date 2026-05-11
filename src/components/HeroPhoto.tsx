@@ -68,11 +68,11 @@ export function HeroPhoto({
       {overlayText && (
         <div className="absolute inset-0 z-10 flex items-center mt-10 text-left">
           <Container>
-            <div
+            <h1
               className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-(--text-primary) ${overlayClassName}`}
             >
               {overlayText}
-            </div>
+            </h1>
           </Container>
         </div>
       )}
