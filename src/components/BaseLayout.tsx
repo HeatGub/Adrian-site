@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Playfair_Display, Nunito } from "next/font/google";
+import StructuredData from "@/components/StructuredData";
 
 // Tailwind mapping of font weights
 // font-thin       → 100
@@ -37,6 +38,7 @@ export default function BaseLayout({
   return (
     <html lang={lang} className={`${primary.variable} ${secondary.variable}`}>
       <body className="min-h-screen">
+        <StructuredData lang={lang} />
         <Navbar />
         {children}
         <Footer />
